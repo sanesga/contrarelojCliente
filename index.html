@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JUEGO CÁLCULO MENTAL</title>
+  </head>
+  <style>
+  .cajas{
+    width: 30px;
+    height: 30px;
+    border: 1px solid lightgrey;
+    text-align: center;
+  }
+  #resultado{
+    height: 30px;
+    text-align: right;
+  }
+  #mensajes{
+    color: red;
+  }
+  #iniciarJuego{
+    width: 200px;
+    height: 40px;
+    background-color: lightseagreen;
+    border-radius: 20px;
+  }
+  </style>
+
+  <body>
+    <div id="contenedor">
+    <h1>Juego de cálculo mental con tiempo</h1>
+    <input id="iniciarJuego" type="button" value="INICIAR JUEGO" onclick="cuentaAtras()">
+    <br><br>
+    <input class="cajas" id="operando1" readonly></input>
+    <input class="cajas" id="operador" readonly></input>
+    <input class="cajas" id="operando2" readonly></input>
+    <input  id="resultado" type="number" onkeypress="pulsar(event)">
+    <input id="boton" type="button" value="Comprobar" onclick="comprobarResultado()">
+    <br><br>
+    <div id="mensajes"></div>
+    <p>Partida número: <span id="numeroPartida"></span> de 5</p>
+    <p>Tiempo restante: <span id="tiempoRestante"></span> de 30 segundos</p>
+
+    <input type="button" value="Reiniciar partida" onclick="reiniciarPartida()">
+  </div>
+
+
+
+    <script src="index.js"></script>
+  </body>
+</html>
